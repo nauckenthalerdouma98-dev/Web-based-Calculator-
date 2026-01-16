@@ -1,0 +1,149 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: var(--background);
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    --background: #ececec;
+    --glass-surface: rgba(255, 254, 254, 0.587);
+    --glass-border: rgba(239, 232, 232, 0.296);
+    --number-keys: #FFFFFF;
+    --operator-keys: #E8F5E9;
+    --equals-button: #91f494b6;
+    --text-primary: #2c474f;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+    position: absolute;
+    left: 500px;
+    bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--glass-surface);
+    border: 2px solid var(--glass-surface);
+    max-width: 480px;
+    height: 600px;
+    box-sizing: content-box;
+    padding: 30px;
+    border-radius: 35px;
+}
+
+.label {
+    /*Making the numbers appear bottom right (39 - 41 lines)*/
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 70px;
+    padding-right: 25px;
+    font-weight: 320;
+    background-color: var(--glass-surface);
+    height: 100px;
+    width: 400px;
+    border: 2px solid var(--glass-border);
+    border-radius: 50px;
+}
+
+.buttons {
+    background-color: var(--glass-surface);
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+    height: 500px;
+}
+
+#one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #zero, #decimal, #posneg{
+    background-color: var(--number-keys);
+    border-radius: 50px;
+    border: 2px solid var(--glass-border);
+    width: 85px;
+    aspect-ratio: 1 / 1;
+    padding: 20px;
+}
+
+#opt {
+    border-radius: 50px;
+    background-color: var(--operator-keys);
+    border: 2px solid var(--glass-border);
+     width: 85px;
+    aspect-ratio: 1 / 1;
+    padding: 20px;
+}
+
+#ac, #del {
+    border-radius: 50px;
+    border: 2px solid var(--glass-border);
+     width: 85px;
+    aspect-ratio: 1 / 1;
+    padding: 20px;
+}
+
+#equal {
+    border-radius: 50px;
+    background-color: var(--equals-button);
+    border: 2px solid var(--glass-border);
+     width: 85px;
+    aspect-ratio: 1 / 1;
+    padding: 20px;
+}
+
+
+
+.signature {
+    color: black;
+    margin-top: 750px;
+    position: absolute;
+    right: 100px;
+    
+}
+
+@media (max-height: 600px) and (orientation:landscape) {
+    body {
+        height: auto;
+        min-height: 100vh;
+        padding: 20px;
+        left: 0;
+        bottom: 0;
+        transform: none;
+    }
+
+    .container {
+        flex-direction: row;
+        max-width: 90vw;
+        height: 300px;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .label {
+        height: 100%;
+        width: 40%;
+        font-size: 50px;
+        align-items: center;
+    }
+
+    .buttons {
+       width: 60%;
+       height: 100%;
+       grid-template-columns: repeat(4, 1fr);
+       grid-template-rows: repeat(5, 1fr);
+    }
+
+
+
+}
