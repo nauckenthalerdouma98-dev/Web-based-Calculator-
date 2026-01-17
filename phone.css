@@ -1,0 +1,62 @@
+/* phone.css */
+
+/* 1. Reset Body Positioning for Mobile */
+body {
+    position: static; /* Removes the absolute positioning from desktop */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 10px; /* Add padding so it doesn't touch edges */
+    left: auto;
+    bottom: auto;
+}
+
+/* 2. Fluid Container */
+.container {
+    width: 100%;
+    max-width: 100%; /* Take full width of phone */
+    height: auto; /* Height grows with content */
+    padding: 15px;
+    border-radius: 20px;
+    gap: 15px;
+}
+
+/* 3. Fluid Label (Screen) */
+.label {
+    width: 100%; /* No longer 400px fixed */
+    height: 80px;
+    font-size: 50px; /* Smaller font for mobile screens */
+    padding-right: 15px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+/* 4. Responsive Grid for Buttons */
+.buttons {
+    height: auto;
+    gap: 8px; /* Smaller gap */
+    padding: 10px;
+}
+
+/* 5. Generic Button Styling for Mobile 
+   (Overriding the fixed 85px width from desktop) */
+#one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #zero, 
+#decimal, #posneg, #calc, #opt, #ac, #del, #equal {
+    width: 100%; /* Fill the grid cell */
+    height: auto;
+    aspect-ratio: 1 / 1; /* Keep them square */
+    padding: 0; /* Remove massive padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; /* Readable font size */
+    border-radius: 15px; /* Softer corners for mobile */
+}
+
+/* 6. Adjust Signature position for mobile */
+.signature {
+    display: none;
+}

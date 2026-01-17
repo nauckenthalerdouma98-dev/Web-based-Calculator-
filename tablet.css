@@ -1,0 +1,58 @@
+/* tablet.css */
+
+/* 1. Center the layout */
+body {
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    left: auto;
+    bottom: auto;
+    background-color: var(--background); /* Ensure background fills screen */
+}
+
+/* 2. Tablet Container */
+.container {
+    /* Make it fill 60-70% of the tablet width */
+    width: 600px; 
+    max-width: 80vw;
+    height: auto;
+    padding: 40px;
+    border-radius: 40px;
+}
+
+/* 3. Label Adjustment */
+.label {
+    width: 100%; /* Fill container */
+    height: 120px; /* Taller for tablets */
+    font-size: 80px; /* Larger text */
+    margin-bottom: 20px;
+}
+
+/* 4. Button Grid */
+.buttons {
+    height: auto;
+    gap: 15px; /* More spacing than phone */
+    padding: 20px;
+}
+
+/* 5. Tablet Buttons */
+#one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #zero, 
+#decimal, #posneg, #calc, #opt, #ac, #del, #equal {
+    width: 100%; /* Fluid width based on grid */
+    aspect-ratio: 1 / 1;
+    font-size: 30px; /* Larger touch targets */
+    border-radius: 25px;
+    padding: 0; /* Center text using flexbox below instead of padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 6. Signature */
+.signature {
+    display: none;
+}

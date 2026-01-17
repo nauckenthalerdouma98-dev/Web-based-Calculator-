@@ -41,7 +41,7 @@ const decimal = document.querySelector("#decimal");
     
         document.querySelector("#posneg").addEventListener("click", () => {
 
-            if (screenval.textContent === "" || screenval.textContent === Error) {
+            if (screenval.textContent === "" || screenval.textContent === "Error") {
                 return
             }
 

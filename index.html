@@ -3,21 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="phone.css" media="(max-width: 767px)">
+    <link rel="stylesheet" href="tablet.css" media="(min-width: 768px) and (max-width: 1024px)">
+
     <script src="script.js" defer></script>
+
     <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+    
     <title>Calculator</title>
 </head>
 <body>
-
+    <div class="super">
     <div class="container">
         <div class="label"></div>
         <div class="buttons">
             <button id="ac">AC</button>
-            <button id="del">DEL</button>            
+            <button id="del"><i class="fa fa-backspace" style=" color: rgb(182, 87, 87); background-color: rgba(210, 180, 140, 0);"></i></button>            
             <button id="opt">+</button>
             <button id="opt">-</button>
-            <button id="seven">7</button>
+            <button id="seven" class="num">7</button>
             <button id="eight">8</button>
             <button id="nine">9</button>
             <button id="opt">x</button>
@@ -32,9 +39,11 @@
             <button id="decimal">.</button>
             <button id="zero">0</button>
             <button id="posneg">+/-</button>
+            <button id="calc"><i class="fa fa-calculator" style="background-color: rgba(127, 255, 212, 0);"></i></button>
         </div>
     </div>
 
     <div class="signature"><br>Designed by Auckenthaler Douma Nils</div>
+    </div>
 </body>
 </html>
